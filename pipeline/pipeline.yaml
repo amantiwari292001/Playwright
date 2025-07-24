@@ -19,4 +19,5 @@ steps:
     displayName: 'Install Playwright browsers'
 
   - script: npx playwright test
-    displayName: 'Run Playwright tests'
+    workingDirectory: 'C:\Dev'
+    displayName: 'Run Playwright tests from C:\Dev'
