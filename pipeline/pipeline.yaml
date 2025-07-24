@@ -1,11 +1,10 @@
-# azure-pipelines.yml
 trigger:
   branches:
     include:
       - master
 
 pool:
-  vmImage: 'AMAN'
+  name: 'Default'  # This tells Azure to use the 'Default' pool where your 'AMAN' agent lives
 
 steps:
   - task: NodeTool@0
