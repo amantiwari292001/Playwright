@@ -1,5 +1,5 @@
 trigger:
-  branch:
+  branches:
     includes: master
 stages:
   - stage: First_Stage
