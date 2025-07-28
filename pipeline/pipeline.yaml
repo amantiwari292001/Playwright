@@ -1,12 +1,11 @@
 trigger:
-  branch: 
+  branch:
     includes: master
-
 stages:
   - stage: First_Stage
-    displayName: "First Stage"
+    displayName: First Stage
     jobs:
       - job: Job_One
-        displayName: "Job One"
+        displayName: Job One
         steps:
           - script: echo "Hey Braah"
