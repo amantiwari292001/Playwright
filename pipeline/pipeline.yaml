@@ -1,6 +1,6 @@
 trigger:
   branches:
-    includes: master
+    include: master
 stages:
   - stage: First_Stage
     displayName: First Stage
