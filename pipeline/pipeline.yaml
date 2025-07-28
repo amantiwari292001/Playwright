@@ -1,23 +1,12 @@
 trigger:
-  branches:
-    include:
-      - master
+  branch: 
+    includes: master
 
-pool:
-  name: 'Default'  # This tells Azure to use the 'Default' pool where your 'AMAN' agent lives
-
-steps:
-  - task: NodeTool@0
-    inputs:
-      versionSpec: '20.x'
-    displayName: 'Install Node.js'
-
-  - script: npm ci
-    displayName: 'Install dependencies'
-
-  - script: npx playwright install
-    displayName: 'Install Playwright browsers'
-
-  - script: npx playwright test
-    workingDirectory: 'C:\Dev'
-    displayName: 'Run Playwright tests from C:\Dev'
+stages:
+  - stage: First_Stage
+    displayName: "First Stage"
+    jobs:
+      - job: Job_One
+        displayName: "Job One"
+        steps:
+          - script: echo "Hey Braah"
